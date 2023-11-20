@@ -78,12 +78,15 @@ iframe {
   margin: 0 auto;
 }
 
+#btn-mobile,
+.contact__btn-2 {
+  display: none;
+}
+
 /*       HEADER       */
 .header {
   height: 100vh;
-  background-image: url(../img/header.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(../img/header.webp) center / cover no-repeat;
 }
 
 .header__top {
@@ -99,19 +102,20 @@ iframe {
 
 .menu {
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   border-radius: 50px;
   border: 1px solid #fff;
   border-bottom: 0;
   background: rgb(199 214 255 / 70%);
   background-blend-mode: soft-light;
   backdrop-filter: blur(35px);
+  margin: 4px 0;
 }
 
 .menu__list {
   display: flex;
   justify-content: center;
-  padding: 4px 17px 4px 17px;
+  padding: 0 17px;
   align-items: center;
   gap: 16px;
 }
@@ -125,12 +129,13 @@ iframe {
 .menu__link:hover,
 .menu__link:active {
   border-radius: 20px;
+  padding: 10px;
   background: #fff;
-  padding: 6px;
   transition: all 0.2s ease-in-out;
 }
 
-.contact__btn {
+.contact__btn, 
+.contact__btn-2 {
   padding: 16px 24px;
   border-radius: 50px;
   background: #2a2a2a;
@@ -141,14 +146,16 @@ iframe {
   line-height: normal;
 }
 
-.contact__btn:hover {
+.contact__btn:hover,
+.contact__btn-2:hover {
   border-radius: 50px;
   background: #001b97;
   background-blend-mode: darken;
   transition: all 0.2s ease-in-out;
 }
 
-.contact__btn:visited {
+.contact__btn:visited,
+.contact__btn-2:visited {
   border-radius: 50px;
   background: #314087;
   background-blend-mode: darken;
@@ -162,6 +169,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  margin-top: -84px;
 }
 
 .intelligent,
@@ -272,8 +280,7 @@ iframe {
 }
 
 .content {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 0 0 30px 30px;
   background-color: #e8ecf9;
   background-image: url(../img/curve-values.png);
   background-repeat: no-repeat;
@@ -468,6 +475,7 @@ iframe {
   border-top-right-radius: 0;
   display: none;
 }
+
 /*     END ACCORDEON   */
 
 /*     STAGE   */
@@ -683,8 +691,7 @@ iframe {
 
 /*      FOOTER     */
 #footer {
-  padding-top: 20px;
-  height: 265px;
+  padding: 20px 0;
   border-radius: 50px;
   background: linear-gradient(94deg, #7e95ff -5.52%, #45549b 105.44%), #5a6cc0;
 }
@@ -692,6 +699,7 @@ iframe {
 .footer__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 20px;
 }
 
@@ -702,18 +710,38 @@ iframe {
   padding-top: 38px;
 }
 
-.footer__social-link-ln,
-.footer__social-link-fb {
-  color: transparent;
+.footer__logo-mobile,
+.footer__logo-title {
+  display: none;
 }
 
+.footer__social-link-ln,
+.footer__social-link-fb {
+  height: 40px;
+  width: 40px;
+}
+
+.footer__social-link-ln {
+  background-image: url(../img/footer/in.svg); 
+}
 .footer__social-link-ln:hover {
-  color: #001b97;
+  background-image: url(../img/footer/in_hover.svg);
+  transition: all 0.2s ease-in-out;
+}
+.footer__social-link-ln:active {
+  background-image: url(../img/footer/in_pressed.svg);
   transition: all 0.2s ease-in-out;
 }
 
+.footer__social-link-fb {
+  background-image: url(../img/footer/fb.svg); 
+}
 .footer__social-link-fb:hover {
-  color: #001b97;
+  background-image: url(../img/footer/fb_hover.svg);
+  transition: all 0.2s ease-in-out;
+}
+.footer__social-link-fb:active {
+  background-image: url(../img/footer/fb_pressed.svg);
   transition: all 0.2s ease-in-out;
 }
 
@@ -757,16 +785,21 @@ textarea {
   padding: 5px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   background: transparent;
   border: none;
   border-bottom: 1px solid #fff;
   outline: none;
+  overflow: hidden;
 }
 
 input::placeholder,
 textarea::placeholder {
   color: #bcc2dc;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+textarea::placeholder {
+  text-overflow: ellipsis;
 }
 
 .form-group {
@@ -779,7 +812,7 @@ textarea::placeholder {
 }
 
 textarea {
-  width: 100%;
+  resize: none;
 }
 
 .btn__message {
@@ -815,11 +848,16 @@ textarea {
 .pop-up form {
   position: relative;
   margin: auto;
-  max-width: 685px;
+  width: 685px;
   padding: 48px;
   border-radius: 50px;
   background: #5a6cc0;
   cursor: default;
+}
+
+.pop-up input,
+.pop-up textarea {
+  margin-bottom: 24px;
 }
 /*     END  POP-UP      */
 
