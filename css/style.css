@@ -25,6 +25,10 @@ body {
   box-sizing: inherit;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 img,
 svg {
   display: block;
@@ -168,17 +172,11 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  margin-top: -84px;
-}
-
-.intelligent,
-.business,
-.growth {
+  height: 80vh;
   color: #fff;
-  font-size: 100px;
+  font-size: calc(60px + 40 * (100vw / 1440));
   font-weight: 800;
-  line-height: normal;
+  line-height: 1.2;
   letter-spacing: 12px;
   text-align: center;
 }
@@ -189,8 +187,7 @@ iframe {
 
 .business {
   text-align: center;
-  margin-top: 63px;
-  margin-bottom: 63px;
+  margin: 60px 0 60px 0;
 }
 
 .growth {
