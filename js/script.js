@@ -1,4 +1,5 @@
 const btn = document.querySelector(".contact__btn");
+const btn2 = document.querySelector(".contact__btn-2");
 const modal = document.querySelector(".pop-up");
 
 modal.style.cssText = `
@@ -22,6 +23,7 @@ const openModal = () => {
 };
 
 btn.addEventListener("click", openModal);
+btn2.addEventListener("click", openModal);
 modal.addEventListener("click", closeModal);
 
 /*     TABS  */
