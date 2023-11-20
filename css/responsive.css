@@ -51,7 +51,18 @@
     .footer__social {
         padding-top: 0;
     }
-    
+    .footer__logo-desktop {
+        /* display: none; */
+        height: 39px;
+        width: 117px;
+    }
+    .footer__logo-mobile {
+        /* display: block;
+        padding: 0px 8px 20px 0px; */
+    }
+    .footer__logo-title {
+        /* display: block; */
+    }
     .contact__btn-2 {
         display: block;
         width: 100%;
