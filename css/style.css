@@ -207,7 +207,7 @@ iframe {
 
 /*      MAIN      */
 .main__content {
-  padding-bottom: 136px;
+  /* padding-bottom: 136px; */
   color: #2a2a2a;
   font-size: 32px;
   font-weight: 400;
@@ -223,7 +223,7 @@ iframe {
 }
 
 .title {
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
   color: #2a2a2a;
   font-size: 40px;
   font-weight: 250;
@@ -238,7 +238,7 @@ iframe {
 .values__container {
   background: url(../img/curve.svg) center / cover no-repeat;
   width: 100%;
-  margin-bottom: 136px;
+  /* margin-bottom: 136px; */
 }
 .values__title {
   padding: 0;
@@ -263,12 +263,12 @@ margin-top: -50px;
 .values__content_item  span {
   display: block;
   height: 48px;
-  background-color: blue;
+  border: 1px dashed #5A6CC0;
   width: 2px;
   margin: 0 auto;
 }
 .item-1 {
-  margin-top: 160px;
+  margin-top: calc(130px + (60 - 30) * ((100vw - 375px) / (1440 - 375)));
 }
 .item-2 {
 }
