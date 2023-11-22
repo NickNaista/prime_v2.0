@@ -94,6 +94,7 @@ iframe {
   margin: 1% auto;
   border-radius: 50px;
   background: url(../img/header.webp) center / cover no-repeat;
+  margin-bottom: 136px;
 }
 
 .header__top {
@@ -206,7 +207,7 @@ iframe {
 
 /*      MAIN      */
 .main__content {
-  padding-top: 136px;
+  padding-bottom: 136px;
   color: #2a2a2a;
   font-size: 32px;
   font-weight: 400;
@@ -222,7 +223,7 @@ iframe {
 }
 
 .title {
-  padding: 136px 0px 80px 0px;
+  padding-bottom: 80px;
   color: #2a2a2a;
   font-size: 40px;
   font-weight: 250;
@@ -232,12 +233,77 @@ iframe {
 
 /*     OUR VALUES     */
 #values {
-  height: 703px;
-  /* background-image: url(../img/curve-4k.png); */
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
+  /* padding-bottom: 136px; */
 }
+.values__container {
+  background: url(../img/curve.svg) center / cover no-repeat;
+  width: 100%;
+  margin-bottom: 136px;
+}
+.values__title {
+  padding: 0;
+}
+.values__content-1,
+.values__content-2 {
+  display: flex;
+}
+
+.values__content-1 {
+justify-content: end;
+gap: 22.5%;
+margin-top: -50px;
+}
+.values__content-2 {
+  justify-content: start;
+  gap: 22.5%;
+}
+.values__content_item {
+  width: 26.4%;
+}
+.values__content_item  span {
+  display: block;
+  height: 48px;
+  background-color: blue;
+  width: 2px;
+  margin: 0 auto;
+}
+.item-1 {
+  margin-top: 160px;
+}
+.item-2 {
+}
+.item-3 {
+ margin: 15px 0 15px;
+}
+.item-4 {
+  margin-top: -100px;
+}
+.values__item_description {
+  display: inline-flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 30px;
+  border: 1px solid #FFF;
+  background: rgba(235, 237, 247, 0.70);
+  backdrop-filter: blur(2px);
+  color: #2A2A2A;
+  line-height: normal;
+}
+.values__item_title {
+  font-size: 24px;
+  font-weight: 500;
+}
+.values__item_subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  padding-right: 35px;
+}
+.point {
+  margin: 0 auto;
+}
+
 /*     END VALUES     */
 
 /*     OUR BUSINESS LINES    */
@@ -885,7 +951,7 @@ textarea {
     max-width: 1425px;
   }
   #values {
-    height: 647px;
+    /* height: 647px; */
     /* background-image: url(../img/curve.png); */
   }
 
